@@ -1,0 +1,20 @@
+{
+    "stm32-for-vscode.openocdPath": "openocd",
+    "cortex-debug.openocdPath": "openocd",
+    "stm32-for-vscode.makePath": "make",
+    "stm32-for-vscode.armToolchainPath": "",
+    "cortex-debug.armToolchainPath": "",
+    "files.associations": {
+        "arm_math.h": "c",
+        "encoder.h": "c",
+        "noahutils.h": "c",
+        "motor.h": "c",
+        "config.h": "c",
+        "stdint.h": "c",
+        "arm_common_tables.h": "c",
+        "main.h": "c",
+        "tim.h": "c",
+        "usart.h": "c"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 120, AlignConsecutiveDeclarations: true}",
+}

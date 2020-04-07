@@ -1,0 +1,6 @@
+Nomenclatura de piezas:
+
+	EstB01
+Est= carpeta a la que pertenece: Estructuras
+B = conjunto al que pertenece: Base
+01 = número de pieza  

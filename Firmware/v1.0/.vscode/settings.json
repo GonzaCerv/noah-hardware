@@ -1,0 +1,23 @@
+{
+    "stm32-for-vscode.openocdPath": "openocd",
+    "cortex-debug.openocdPath": "openocd",
+    "stm32-for-vscode.makePath": "make",
+    "stm32-for-vscode.armToolchainPath": "",
+    "cortex-debug.armToolchainPath": "",
+    "files.associations": {
+        "button.h": "c",
+        "battery.h": "c",
+        "logging.h": "c",
+        "tim.h": "c",
+        "motor.h": "c",
+        "cmath": "c",
+        "*.tcc": "c",
+        "cstdlib": "c",
+        "cmsis_os.h": "c",
+        "main.h": "c",
+        "usartcommunication.h": "c",
+        "irmotion.h": "c",
+        "config.h": "c"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 120, AlignConsecutiveDeclarations: true}"
+}
