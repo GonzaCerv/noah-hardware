@@ -1,12 +1,5 @@
 # Folders
-Firmware/v1.0/build/
-Firmware/v1.1/build/
-Firmware/v1.2/build/
-Firmware/test_leds/build/
-Firmware/test_motion/build/
-Firmware/test_power_management/build/
-Firmware/test_uart/build/
-Firmware/.vscode/
+firmware/build/
 PCB/__Previews/
 PCB/History/
 PCB/Project Logs for Base/

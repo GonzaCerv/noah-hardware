@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "name": "STM32",
+      "includePath": [
+        "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+        "Drivers/CMSIS/Include",
+        "Drivers/STM32F4xx_HAL_Driver/Inc",
+        "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+        "Inc",
+        "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+        "Middlewares/Third_Party/FreeRTOS/Source/include",
+        "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+      ],
+      "defines": [
+        "ARM_MATH_CM4",
+        "STM32F407xx",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "arm-none-eabi-gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++11"
+    }
+  ],
+  "version": 4
+}

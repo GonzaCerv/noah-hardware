@@ -14,19 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L STM32F4Discovery:STM32F4DISCOVERY TB1
-U 1 1 5E7D4E96
-P 9250 3550
-F 0 "TB1" H 8700 6500 50  0000 C CNN
-F 1 "STM32F4DISCOVERY" H 9250 6526 50  0000 C CNN
-F 2 "noone_footprints:MODULE_STM32F4DISCOVERY" H 9250 3550 50  0001 L BNN
-F 3 "Manufacturer Recommendations" H 9250 3550 50  0001 L BNN
-F 4 "6" H 9250 3550 50  0001 L BNN "Field4"
-F 5 "STMicroelectronics" H 9250 3550 50  0001 L BNN "Field5"
-	1    9250 3550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:LM317_3PinPackage U2
 U 1 1 5E7E1E73
 P 3700 3350
@@ -429,7 +416,7 @@ U 1 1 5E85E5CE
 P 1450 2500
 F 0 "R2" V 1350 2500 50  0000 L CNN
 F 1 "270" V 1250 2450 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 1380 2500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 1380 2500 50  0001 C CNN
 F 3 "~" H 1450 2500 50  0001 C CNN
 	1    1450 2500
 	0    -1   -1   0   
@@ -718,8 +705,6 @@ Wire Wire Line
 	3950 5850 3800 5850
 Text Label 10250 3750 0    50   ~ 0
 MOT_L1
-Text Label 8000 6050 0    50   ~ 0
-MOT_L2
 Text Label 10250 3150 0    50   ~ 0
 MOT_R2
 Text Label 10250 3350 0    50   ~ 0
@@ -753,17 +738,15 @@ $EndComp
 Wire Wire Line
 	6400 5900 6000 5900
 Text Label 8000 1650 0    50   ~ 0
-STM_TX
-Text Label 8000 1750 0    50   ~ 0
 STM_RX
 Wire Wire Line
 	8450 1650 8000 1650
 Wire Wire Line
 	8000 1750 8450 1750
 Text Label 6050 6000 0    50   ~ 0
-STM_RX
-Text Label 6050 6100 0    50   ~ 0
 STM_TX
+Text Label 6050 6100 0    50   ~ 0
+STM_RX
 Wire Wire Line
 	6400 6000 6050 6000
 Wire Wire Line
@@ -1025,8 +1008,6 @@ Wire Wire Line
 Wire Wire Line
 	10250 3750 10050 3750
 Wire Wire Line
-	8450 6050 8000 6050
-Wire Wire Line
 	8450 1850 8000 1850
 Wire Wire Line
 	3700 3900 4450 3900
@@ -1077,4 +1058,23 @@ Text Label 1300 2300 0    50   ~ 0
 SMPS_EN
 Wire Wire Line
 	1300 2300 1150 2300
+Wire Wire Line
+	8450 6050 8000 6050
+Text Label 8000 6050 0    50   ~ 0
+MOT_L2
+$Comp
+L STM32F4Discovery:STM32F4DISCOVERY TB1
+U 1 1 5E7D4E96
+P 9250 3550
+F 0 "TB1" H 8700 6500 50  0000 C CNN
+F 1 "STM32F4DISCOVERY" H 9250 6526 50  0000 C CNN
+F 2 "noone_footprints:MODULE_STM32F4DISCOVERY" H 9250 3550 50  0001 L BNN
+F 3 "Manufacturer Recommendations" H 9250 3550 50  0001 L BNN
+F 4 "6" H 9250 3550 50  0001 L BNN "Field4"
+F 5 "STMicroelectronics" H 9250 3550 50  0001 L BNN "Field5"
+	1    9250 3550
+	1    0    0    -1  
+$EndComp
+Text Label 8000 1750 0    50   ~ 0
+STM_TX
 $EndSCHEMATC
