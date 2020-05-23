@@ -31,15 +31,15 @@
 #define MOTOR_L_2_PORT MOT_L2_GPIO_Port
 #define MOTOR_L_2_PIN MOT_L2_Pin
 
-#define MOTOR_BRIDGE_EN_PORT STAND_BY_GPIO_Port
-#define MOTOR_BRIDGE_EN_PIN STAND_BY_Pin
+#define MOTOR_BRIDGE_EN_PORT MOT_STAND_BY_GPIO_Port
+#define MOTOR_BRIDGE_EN_PIN MOT_STAND_BY_Pin
 
 #define MOTOR_TIMER htim4
 #define MOTOR_CHANNEL_L TIM_CHANNEL_2
 #define MOTOR_CHANNEL_R TIM_CHANNEL_3
 
-#define SMPS_OFF_PORT SMPS_EN_GPIO_Port
-#define SMPS_OFF_PIN SMPS_EN_Pin
+#define SMPS_OFF_PORT ON_BUTTON_GPIO_Port
+#define SMPS_OFF_PIN ON_BUTTON_Pin
 
 #define PWM_MAX_VAL 719.0f
 #define PWM_MIN_VAL 90.0f
@@ -56,7 +56,7 @@
 // This value has to be the same as the update rate of the interrupt that
 // reads the values of the timers connected to the encoder.
 #define MAX_SPEED_METER_SEC 0.6f
-#define SPEED_RESOLUTION  0.02f
+#define SPEED_RESOLUTION 0.02f
 
 #define ENCODER_TIMER_INT htim7
 #define ENCODER_TIMER_L htim2

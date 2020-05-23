@@ -1,0 +1,32 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# MCP16301T-I/CHY
+#
+DEF MCP16301T-I/CHY U 0 40 Y Y 1 L N
+F0 "U" -500 439 50 H V L BNN
+F1 "MCP16301T-I/CHY" -500 -557 50 H V L BNN
+F2 "SOT95P270X145-6N" 0 0 50 H I L BNN
+F3 "None" 0 0 50 H I L BNN
+F4 "Ic, Regulator; Type, Switching; 4.0 - 30v; Output Voltage, Variable; 600ma; Sot23-6" 0 0 50 H I L BNN
+F5 "Microchip" 0 0 50 H I L BNN
+F6 "MCP16301T-I/CHY" 0 0 50 H I L BNN
+F7 "SOT-23-6 Microchip" 0 0 50 H I L BNN
+F8 "IPC7351B" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 16 -500 400 500 400 N
+P 2 0 0 16 500 400 500 -400 N
+P 2 0 0 16 500 -400 -500 -400 N
+P 2 0 0 16 -500 -400 -500 400 N
+X EN 4 -700 100 200 R 40 40 0 0 I 
+X VFB 3 700 100 200 L 40 40 0 0 I 
+X BOOST 1 -700 -100 200 R 40 40 0 0 B 
+X SW 6 700 300 200 L 40 40 0 0 O 
+X VIN 5 -700 200 200 R 40 40 0 0 W 
+X GND 2 700 -300 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library
