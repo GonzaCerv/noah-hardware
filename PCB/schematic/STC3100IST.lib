@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# STC3100IST
+#
+DEF STC3100IST U 0 40 Y Y 1 L N
+F0 "U" -500 639 50 H V L BNN
+F1 "STC3100IST" -500 -757 50 H V L BNN
+F2 "SOIC65P490X110-8N" 0 0 50 H I L BNN
+F3 "IPC-7351B" 0 0 50 H I L BNN
+F4 "TSSOP-8 STMicroelectronics" 0 0 50 H I L BNN
+F5 "STMicroelectronics" 0 0 50 H I L BNN
+F6 "STC3100IST" 0 0 50 H I L BNN
+F7 "STC3100 Series 5.5 V Battery Monitor IC with Coulomb Counter/Gas Gauge - MSOP-8" 0 0 50 H I L BNN
+F8 "68770" 0 0 50 H I L BNN
+F9 "None" 0 0 50 H I L BNN
+F10 "Unavailable" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 16 -500 600 500 600 N
+P 2 0 0 16 500 600 500 -600 N
+P 2 0 0 16 500 -600 -500 -600 N
+P 2 0 0 16 -500 -600 -500 600 N
+X CG 6 -700 200 200 R 40 40 0 0 I 
+X ROSC 2 -700 100 200 R 40 40 0 0 I 
+X SCL 4 -700 -200 200 R 40 40 0 0 I C
+X SDA 3 -700 -300 200 R 40 40 0 0 I 
+X IO0 1 -700 0 200 R 40 40 0 0 B 
+X VCC 7 700 500 200 L 40 40 0 0 W 
+X VIN 8 700 400 200 L 40 40 0 0 W 
+X GND 5 700 -500 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library

@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# BH600
+#
+DEF BH600 BT 0 40 Y N 1 L N
+F0 "BT" -150 150 50 H V L BNN
+F1 "BH600" -150 -200 50 H V L BNN
+F2 "BAT_BH600" 0 0 50 H I L BNN
+F3 "D" 0 0 50 H I L BNN
+F4 "MPD" 0 0 50 H I L BNN
+F5 "Manufacturer Recommendations" 0 0 50 H I L BNN
+F6 "8.38mm" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -50 100 -50 0 N
+P 2 0 0 10 -50 0 -50 -100 N
+P 2 0 0 10 50 50 50 0 N
+P 2 0 0 10 50 0 50 -50 N
+P 2 0 0 6 -50 0 -100 0 N
+P 2 0 0 6 50 0 100 0 N
+P 2 0 0 10 -125 100 -125 50 N
+P 2 0 0 10 -150 75 -100 75 N
+P 2 0 0 10 150 75 100 75 N
+X + + -300 0 200 R 40 40 0 0 P 
+X - - 300 0 200 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

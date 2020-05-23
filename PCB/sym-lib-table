@@ -1,0 +1,13 @@
+(sym_lib_table
+  (lib (name STM32F4)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/STM32F4DISCOVERY.lib)(options "")(descr ""))
+  (lib (name ROB-14450)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/ROB-14450.lib)(options "")(descr ""))
+  (lib (name VND830)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/VND830SPTR-E.lib)(options "")(descr ""))
+  (lib (name STC3100)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/STC3100IST.lib)(options "")(descr ""))
+  (lib (name ADEM_Libraries)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/Adem.lib)(options "")(descr ""))
+  (lib (name root-rescue)(type Legacy)(uri ${KIPRJMOD}/root-rescue.lib)(options "")(descr ""))
+  (lib (name XL4015)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/xl4015.lib)(options "")(descr ""))
+  (lib (name XT60)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/XT60-M.lib)(options "")(descr ""))
+  (lib (name batteryHolder)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/BH600.lib)(options "")(descr ""))
+  (lib (name MCP16301T-I_CHY)(type Legacy)(uri D:/proyectos/Noah/noah-hardware/PCB/schematic/MCP16301T-I_CHY.lib)(options "")(descr ""))
+  (lib (name GY-91)(type Legacy)(uri ${KIPRJMOD}/schematic/GY-91.lib)(options "")(descr ""))
+)

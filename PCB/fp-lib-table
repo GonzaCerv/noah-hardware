@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name noah_footprint)(type KiCad)(uri D:/proyectos/Noah/noah-hardware/PCB/footprint)(options "")(descr ""))
+  (lib (name GY-91)(type KiCad)(uri ${KIPRJMOD}/footprint/GY-91.pretty)(options "")(descr ""))
+)
