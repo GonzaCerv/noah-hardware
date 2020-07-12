@@ -416,7 +416,7 @@ U 1 1 5EC2D7F7
 P 1400 4800
 F 0 "J20" H 1450 5217 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 1450 5126 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1400 4800 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1400 4800 50  0001 C CNN
 F 3 "~" H 1400 4800 50  0001 C CNN
 	1    1400 4800
 	1    0    0    -1  
@@ -643,7 +643,7 @@ Text Label 6850 3400 0    50   ~ 0
 SWIM
 Text HLabel 6800 2100 2    50   Input ~ 0
 SENS_B_R
-Text HLabel 4700 3200 0    50   Output ~ 0
+Text HLabel 4700 3100 0    50   Output ~ 0
 MOT_R1
 Text HLabel 4700 3400 0    50   Output ~ 0
 MOT_L1
@@ -659,7 +659,7 @@ Text HLabel 6800 1500 2    50   Input ~ 0
 SENS_B_L
 Text HLabel 6800 1400 2    50   Input ~ 0
 SENS_A_L
-Text HLabel 4700 3100 0    50   Output ~ 0
+Text HLabel 4700 3200 0    50   Output ~ 0
 MOT_R2
 Text HLabel 6800 5300 2    50   Output ~ 0
 ENABLE_PRESSED

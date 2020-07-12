@@ -1,0 +1,24 @@
+// This file describes all the available data types that can be used 
+// to communicate with ROS.
+
+namespace noah.ros;
+
+enum Side:byte { All }
+
+struct EncoderRequest {
+  side:Side;
+}
+
+struct EncoderResponse{
+  ticks_l:int16;
+  ticks_r:int16;
+}
+
+table DataPackage {
+  encoderRequest:EncoderRequest;
+  encoderResponse:EncoderResponse;
+  targetSpeedLRequest:float;
+  targetSpeedRRequest:float;
+}
+
+root_type DataPackage;

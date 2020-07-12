@@ -643,7 +643,7 @@ Text Label 6850 3400 0    50   ~ 0
 SWIM
 Text HLabel 6800 2100 2    50   Input ~ 0
 SENS_B_R
-Text HLabel 4700 3200 0    50   Output ~ 0
+Text HLabel 4700 3100 0    50   Output ~ 0
 MOT_R1
 Text HLabel 4700 3400 0    50   Output ~ 0
 MOT_L1
@@ -659,7 +659,7 @@ Text HLabel 6800 1500 2    50   Input ~ 0
 SENS_B_L
 Text HLabel 6800 1400 2    50   Input ~ 0
 SENS_A_L
-Text HLabel 4700 3100 0    50   Output ~ 0
+Text HLabel 4700 3200 0    50   Output ~ 0
 MOT_R2
 Text HLabel 6800 5300 2    50   Output ~ 0
 ENABLE_PRESSED

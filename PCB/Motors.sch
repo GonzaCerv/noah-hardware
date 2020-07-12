@@ -254,9 +254,9 @@ Text HLabel 3850 3550 0    50   Input ~ 0
 MOT_L2
 Text HLabel 3850 3650 0    50   Input ~ 0
 MOT_L1
-Text HLabel 3850 3850 0    50   Input ~ 0
-MOT_R1
 Text HLabel 3850 3950 0    50   Input ~ 0
+MOT_R1
+Text HLabel 3850 3850 0    50   Input ~ 0
 MOT_R2
 Wire Wire Line
 	3850 3850 4300 3850
