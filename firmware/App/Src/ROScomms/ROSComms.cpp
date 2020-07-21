@@ -60,7 +60,8 @@ void ROSComms::processIncommingPackage() {
   auto incomming_package = GetDataPackage(buffer_);
 
   // Check if there is an encoderRequest
-  if (incomming_package->encoderRequest()) {
+
+  if (flatbuffers::IsFieldPresent(incomming_package, DataPackage::VT_ENCODERREQUEST)) {
     auto ticks_l = noahInfo_get_ticks_l(noah_info_handler_);
     auto ticks_r = noahInfo_get_ticks_r(noah_info_handler_);
 
@@ -70,12 +71,12 @@ void ROSComms::processIncommingPackage() {
   }
 
   // Check if there is a new target speed for motor L
-  if (incomming_package->targetSpeedLRequest()) {
+  if (flatbuffers::IsFieldPresent(incomming_package, DataPackage::VT_TARGETSPEEDLREQUEST)) {
     noahInfo_set_target_speed_l(noah_info_handler_, incomming_package->targetSpeedLRequest());
   }
 
   // Check if there is a new target speed for motor R
-  if (incomming_package->targetSpeedRRequest()) {
+  if (flatbuffers::IsFieldPresent(incomming_package, DataPackage::VT_TARGETSPEEDRREQUEST)) {
     noahInfo_set_target_speed_r(noah_info_handler_, incomming_package->targetSpeedRRequest());
   }
 
