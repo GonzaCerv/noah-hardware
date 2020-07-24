@@ -24,6 +24,9 @@ namespace noah {
 namespace ros {
 
 static constexpr uint16_t UART_BUFFER_SIZE { 100 };
+// Minimum and maximum incomming data.
+static constexpr uint16_t UART_MIN_PACKAGE_SIZE { 10 };
+static constexpr uint16_t UART_MAX_PACKAGE_SIZE { 45 };
 
 class ROSComms {
  public:

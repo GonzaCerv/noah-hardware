@@ -57,7 +57,7 @@ void ROSComms::processIncommingPackage() {
   DataPackageBuilder response_builder(builder);
 
   // Deserialize the incoming package.
-  auto incomming_package = GetDataPackage(buffer_);
+  auto incomming_package = GetDataPackage(&buffer_[0]);
 
   // Check if there is an encoderRequest
 
