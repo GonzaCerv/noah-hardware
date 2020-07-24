@@ -147,12 +147,19 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     PB6     ------> USART1_TX
     PB7     ------> USART1_RX 
     */
-    GPIO_InitStruct.Pin = USART1_MOSI_Pin|USART1_MISO_Pin;
+    GPIO_InitStruct.Pin = USART1_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+    HAL_GPIO_Init(USART1_MOSI_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = USART1_MISO_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
+    HAL_GPIO_Init(USART1_MISO_GPIO_Port, &GPIO_InitStruct);
 
     /* USART1 DMA Init */
     /* USART1_RX Init */
@@ -190,12 +197,19 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     PD5     ------> USART2_TX
     PD6     ------> USART2_RX 
     */
-    GPIO_InitStruct.Pin = USART2_GPS_MOSI_Pin|USART2_GPS_MISO_Pin;
+    GPIO_InitStruct.Pin = USART2_GPS_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
-    HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+    HAL_GPIO_Init(USART2_GPS_MOSI_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = USART2_GPS_MISO_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
+    HAL_GPIO_Init(USART2_GPS_MISO_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN USART2_MspInit 1 */
 
@@ -214,12 +228,19 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     PB10     ------> USART3_TX
     PB11     ------> USART3_RX 
     */
-    GPIO_InitStruct.Pin = USART3_ESP07_MOSI_Pin|USART3_ESP07_MISO_Pin;
+    GPIO_InitStruct.Pin = USART3_ESP07_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+    HAL_GPIO_Init(USART3_ESP07_MOSI_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = USART3_ESP07_MISO_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
+    HAL_GPIO_Init(USART3_ESP07_MISO_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN USART3_MspInit 1 */
 
