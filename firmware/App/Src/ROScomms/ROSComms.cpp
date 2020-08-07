@@ -63,6 +63,8 @@ void ROSComms::processIncommingPackage() {
 
   if (flatbuffers::IsFieldPresent(incomming_package, DataPackage::VT_ENCODERREQUEST)) {
     auto ticks_l = noahInfo_get_ticks_l(noah_info_handler_);
+    // Invert speed to make to robot go forward.
+    ticks_l = -ticks_l;
     auto ticks_r = noahInfo_get_ticks_r(noah_info_handler_);
 
     auto encoder_response = EncoderResponse(ticks_l, ticks_r);
@@ -72,7 +74,8 @@ void ROSComms::processIncommingPackage() {
 
   // Check if there is a new target speed for motor L
   if (flatbuffers::IsFieldPresent(incomming_package, DataPackage::VT_TARGETSPEEDLREQUEST)) {
-    noahInfo_set_target_speed_l(noah_info_handler_, incomming_package->targetSpeedLRequest());
+    // Invert speed to make to robot go forward.
+    noahInfo_set_target_speed_l(noah_info_handler_, -incomming_package->targetSpeedLRequest());
   }
 
   // Check if there is a new target speed for motor R
