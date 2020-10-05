@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="./Doc\robot_sin_bg.png" alt="Project logo"></a>
+ <img width=200px height=200px src="./Doc/images/robot_no_bg.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Noah Hardware</h3>
@@ -15,9 +15,9 @@
 ---
 This repo contains all the necessary hardware for noah-robot. 
 
-## 📝 Table of Contents
+## Table of Contents
 
-- [📝 Table of Contents](#-table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [About](#about)
 - [Mechanics](#mechanics)
 - [Electronics](#electronics)
@@ -37,13 +37,15 @@ Take a look to the other repos related to this project:
 
 ## Mechanics
 
- <img src="./Doc\Explode.png" alt="explode"></a>
+ <img width=400px src="Doc/images/Explode.png" alt="explode"></a>
 
 The robot is made out of 3D printed parts, some parts made with 3mm laser cut and vitamins. All the parts were designed with Solidworks. You can find those parts as well as files for construction in the [3D model section](./noah-hardware\Doc\3D_model).
 
+Checkout the [Assembly file](Doc/Assembly.md) to learn how to build this robot.
+
 ## Electronics
 
-<img src="./Doc\PCB_finished.png" alt="pcb_finished"></a>
+<img src="Doc/images/PCB_finished.png" alt="pcb_finished"></a>
 
 The main PCB is in charge of controlling all the peripherals of the robot. You can see in the pictures a all the connectors available. Several modules were provided:
 
