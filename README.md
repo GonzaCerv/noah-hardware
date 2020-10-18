@@ -41,7 +41,16 @@ Take a look to the other repos related to this project:
 
 The robot is made out of 3D printed parts, some parts made with 3mm laser cut and vitamins. All the parts were designed with Solidworks. You can find those parts as well as files for construction in the [3D model section](./noah-hardware\Doc\3D_model).
 
-Checkout the [Assembly file](Doc/Assembly.md) to learn how to build this robot.
+There are 2 versions of the robot. The **Noah** version which uses the noah main controller board. If you want to implement your own circuit a **generic** version was also
+designed. 
+
+- [Assembly file generic version](Doc/assembly_generic.md).
+  
+<img width=500px src="images/../Doc/images/robot_generic.png" alt="Generic version"></a>
+
+- [Assembly file Noah version](Doc/assembly_noah.md).
+  
+<img width=500px src="images/../Doc/images/robot_noah.png" alt="Noah version"></a>
 
 ## Electronics
 
