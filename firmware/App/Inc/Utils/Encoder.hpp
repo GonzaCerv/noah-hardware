@@ -18,18 +18,19 @@
 #include <limits>
 
 // CubeMx libraries
-#include <NoahUtils.h>
 #include "cmsis_os.h"
 #include "main.h"
 #include "tim.h"
 
 // Noah libraries
+#include "Utils/NoahUtils.h"
 
-using noah::noah_utils::Pin;
-using noah::noah_utils::MotorChannel;
-using noah::noah_utils::applyResolution;
+using noah::utils::Pin;
+using noah::utils::MotorChannel;
+using noah::utils::applyResolution;
 
 namespace noah {
+namespace utils {
 
 class Encoder {
  public:
@@ -117,14 +118,14 @@ class Encoder {
       int16_t ticks_before_wrap = 0;
       int16_t ticks_after_wrap = 0;
       if (previous_ticks < 0) {
-        ticks_before_wrap = previous_ticks + std::numeric_limits<int16_t>::max();
+        ticks_before_wrap = previous_ticks + std::numeric_limits < int16_t > ::max();
       } else {
-        ticks_before_wrap = (-std::numeric_limits<int16_t>::min()) - previous_ticks;
+        ticks_before_wrap = (-std::numeric_limits < int16_t > ::min()) - previous_ticks;
       }
       if (current_ticks < 0) {
-        ticks_after_wrap = current_ticks + std::numeric_limits<int16_t>::max();
+        ticks_after_wrap = current_ticks + std::numeric_limits < int16_t > ::max();
       } else {
-        ticks_after_wrap = (-std::numeric_limits<int16_t>::min()) - previous_ticks;
+        ticks_after_wrap = (-std::numeric_limits < int16_t > ::min()) - previous_ticks;
       }
 
       result = ticks_after_wrap + ticks_before_wrap;
@@ -169,4 +170,5 @@ class Encoder {
 
 };
 
+}
 }

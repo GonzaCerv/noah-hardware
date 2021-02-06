@@ -16,16 +16,16 @@
 #include "usart.h"
 
 // Noah libraries
-#include "flatbuffers/DataPackage_generated.h"
-#include "flatbuffers/flatbuffers.h"
-#include "flatbuffers/FreeRtosAllocator.h"
-#include "ROScomms/ROSComms.hpp"
+#include "External/flatbuffers/DataPackage_generated.h"
+#include "External/flatbuffers/flatbuffers.h"
+#include "External/flatbuffers/FreeRtosAllocator.h"
+#include "Tasks/ROScomms/ROSComms.hpp"
 
 extern float target_speed_;
 extern float current_speed_;
 
 namespace noah {
-namespace ros {
+namespace tasks {
 
 ROSComms::ROSComms(const UART_HandleTypeDef &ros_port, const float update_rate, NoahInfoHandler *noah_info_handler) :
     ros_port_ { ros_port },
@@ -41,7 +41,7 @@ int ROSComms::run() {
     if (isNewDataAvailable()) {
       processIncommingPackage();
     }
-    osDelay(update_rate_);
+    osDelay (update_rate_);
   }
   return EXIT_SUCCESS;
 }
@@ -49,7 +49,7 @@ int ROSComms::run() {
 void ROSComms::processIncommingPackage() {
   bool send_response = false;
   // Stop reception to process the new packages.
-  HAL_UART_DMAStop(&ros_port_);
+  HAL_UART_DMAStop (&ros_port_);
 
   // Objects that allows to serialize the response.
   flatbuffers::FreeRtosAllocator allocator;

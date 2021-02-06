@@ -15,13 +15,13 @@
 // CubeMx libraries
 #include "cmsis_os.h"
 #include "main.h"
-#include "NoahInfo.h"
+#include "Utils/NoahInfo.h"
 #include "usart.h"
 
 // Noah libraries
 
 namespace noah {
-namespace ros {
+namespace tasks {
 
 static constexpr uint16_t UART_BUFFER_SIZE { 100 };
 // Minimum and maximum incomming data.

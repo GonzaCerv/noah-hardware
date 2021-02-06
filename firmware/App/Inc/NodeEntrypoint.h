@@ -12,7 +12,7 @@
 #ifndef INC_NODEENTRYPOINT_H_
 #define INC_NODEENTRYPOINT_H_
 
-#include "NoahInfo.h"
+#include "Utils/NoahInfo.h"
 
 #ifdef __cplusplus
 extern "C" {

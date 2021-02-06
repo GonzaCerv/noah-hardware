@@ -10,15 +10,15 @@
  */
 
 // Standard libraries
-#include "stdlib.h"
+#include <cstdlib>
 
 // Noah libraries
 #include "Config.h"
-#include "NoahInfo.h"
 #include "NodeEntrypoint.h"
-#include "ROScomms/ROSComms.hpp"
+#include "Tasks/ROScomms/ROSComms.hpp"
+#include "Utils/NoahInfo.h"
 
-using noah::ros::ROSComms;
+using noah::tasks::ROSComms;
 
 // External variable definitions
 

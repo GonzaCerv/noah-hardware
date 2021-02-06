@@ -11,7 +11,6 @@
 
 #pragma once
 
-
 // CubeMx libraries
 #include "cmsis_os.h"
 #include "main.h"
@@ -79,6 +78,4 @@
 #define COMMAND_MOTOR_KP 0xA5
 #define COMMAND_MOTOR_KI 0xA6
 #define COMMAND_MOTOR_KD 0xA7
-
-
 
