@@ -1,7 +1,7 @@
 // This file describes all the available data types that can be used 
 // to communicate with ROS.
 
-namespace noah.ros;
+namespace noah.tasks;
 
 enum Side:byte { All }
 

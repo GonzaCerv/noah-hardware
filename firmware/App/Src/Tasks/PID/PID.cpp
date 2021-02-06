@@ -10,22 +10,21 @@
  */
 
 // Standard libraries
-#include "stdlib.h"
+#include <cstdlib>
 
 // CubeMx libraries
 #include "stm32f407xx.h"
 
 // Noah libraries
-#include "PID/PID.hpp"
+#include "Tasks/PID/PID.hpp"
 
 extern float target_speed_;
 extern float current_speed_;
 
 namespace noah {
-namespace pid {
+namespace tasks {
 
-PID::PID(Motor &motor,
-         const float max_integration_sum, const float kp, const float ki, const float kd) :
+PID::PID(Motor &motor, const float max_integration_sum, const float kp, const float ki, const float kd) :
     motor_ { motor },
     max_integration_sum_ { max_integration_sum },
     kp_ { kp },
@@ -53,5 +52,4 @@ void PID::updatePID(float target_speed, float current_speed) {
 }
 
 }
-
 }

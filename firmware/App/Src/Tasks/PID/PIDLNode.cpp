@@ -11,17 +11,17 @@
 
 // Noah libraries
 #include "Config.h"
-#include "Encoder.hpp"
-#include "Motor.hpp"
-#include "NoahInfo.h"
 #include "NodeEntrypoint.h"
-#include "PID/PID.hpp"
+#include "Tasks/PID/PID.hpp"
+#include "Utils/Encoder.hpp"
+#include "Utils/Motor.hpp"
+#include "Utils/NoahInfo.h"
 
-using noah::Encoder;
-using noah::Motor;
-using noah::pid::PID;
-using noah::noah_utils::MotorChannel;
-using noah::noah_utils::Pin;
+using noah::utils::Encoder;
+using noah::utils::Motor;
+using noah::tasks::PID;
+using noah::utils::MotorChannel;
+using noah::utils::Pin;
 
 // External variable definitions
 extern osMessageQId msg_q_encoder_lHandle;
@@ -71,4 +71,3 @@ int PIDLNode(NoahInfoHandler *noah_info_handler) {
   }
   return EXIT_SUCCESS;
 }
-

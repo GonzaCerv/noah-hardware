@@ -14,7 +14,7 @@
 #include "stdbool.h"
 
 // Noah libraries
-#include "NoahInfo.h"
+#include "Utils/NoahInfo.h"
 
 void noahInfo_init(osMutexId *mutex, NoahInfoHandler *info_handler) {
   info_handler->mutexHandle = mutex;
@@ -24,8 +24,8 @@ void noahInfo_init(osMutexId *mutex, NoahInfoHandler *info_handler) {
   info_handler->target_speed_r = 0.0f;
 }
 
-bool noahInfo_isInitialized(NoahInfoHandler *info_handler){
-  if(info_handler->mutexHandle){
+bool noahInfo_isInitialized(NoahInfoHandler *info_handler) {
+  if (info_handler->mutexHandle) {
     return true;
   }
   return false;
@@ -86,8 +86,4 @@ float noahInfo_get_target_speed_r(NoahInfoHandler *info_handler) {
   osMutexRelease(*(info_handler->mutexHandle));
   return speed;
 }
-
-
-
-
 

@@ -12,26 +12,28 @@
 #pragma once
 
 // Standard libraries
-#include <stdlib.h>
+#include <cstdlib>
+
 // CubeMx libraries
-#include <NoahUtils.h>
 #include "main.h"
 #include "tim.h"
 
 // Noah libraries
+#include "Utils/NoahUtils.h"
 
-using noah::noah_utils::Pin;
-using noah::noah_utils::MotorChannel;
+using noah::utils::Pin;
+using noah::utils::MotorChannel;
 
 namespace noah {
+namespace utils {
 
 class Motor {
  public:
   /**
    * @brief Default constructor
    */
-  explicit Motor(MotorChannel &channel, const Pin &motor_a, const Pin &motor_b,
-                 const uint32_t min_value, const uint32_t max_value) :
+  explicit Motor(MotorChannel &channel, const Pin &motor_a, const Pin &motor_b, const uint32_t min_value,
+                 const uint32_t max_value) :
       motor_timer_ { channel },
       motor_a_ { motor_a },
       motor_b_ { motor_b },
@@ -86,11 +88,9 @@ class Motor {
     uint32_t duty_value;
     if (value > max_value_) {
       duty_value = max_value_;
-    }
-    else if (value < min_value_) {
+    } else if (value < min_value_) {
       duty_value = 0;
-    }
-    else {
+    } else {
       duty_value = value;
     }
     current_duty = duty_value;
@@ -128,4 +128,5 @@ class Motor {
 
 };
 
+}
 }

@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under Ultimate Liberty license
@@ -30,9 +30,9 @@
 
 /* USER CODE END 1 */
 
-/** Configure pins as 
-        * Analog 
-        * Input 
+/** Configure pins as
+        * Analog
+        * Input
         * Output
         * EVENT_OUT
         * EXTI
@@ -51,9 +51,9 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOE, MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin 
-                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin 
-                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin 
+  HAL_GPIO_WritePin(GPIOE, MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin
+                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin
+                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin
                           |MOT_R2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
@@ -71,13 +71,13 @@ void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, EN_SMPS_Pin|OUT0_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PEPin PEPin PEPin PEPin 
-                           PEPin PEPin PEPin PEPin 
-                           PEPin PEPin PEPin PEPin 
+  /*Configure GPIO pins : PEPin PEPin PEPin PEPin
+                           PEPin PEPin PEPin PEPin
+                           PEPin PEPin PEPin PEPin
                            PEPin */
-  GPIO_InitStruct.Pin = MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin 
-                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin 
-                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin 
+  GPIO_InitStruct.Pin = MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin
+                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin
+                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin
                           |MOT_R2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

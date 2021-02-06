@@ -53,7 +53,7 @@
   #include <functional>
 #endif
 
-#include <flatbuffers/stl_emulation.h>
+#include <External/flatbuffers/stl_emulation.h>
 
 #if defined(__ICCARM__)
 #include <intrinsics.h>

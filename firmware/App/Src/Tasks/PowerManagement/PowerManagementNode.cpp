@@ -12,9 +12,9 @@
 // Noah libraries
 #include <Config.h>
 #include "NodeEntrypoint.h"
-#include "PowerManagement/PowerManagement.hpp"
+#include "Tasks/PowerManagement/PowerManagement.hpp"
 
-using noah::power_management::PowerManagement;
+using noah::tasks::PowerManagement;
 /**
  * @brief Initializes the power management node
  * @return

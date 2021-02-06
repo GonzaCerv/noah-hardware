@@ -11,18 +11,17 @@
 
 #pragma once
 
-// Standard libraries
 // CubeMx libraries
-#include <NoahUtils.h>
 #include "cmsis_os.h"
 #include "main.h"
 
 // Noah libraries
+#include "Utils/NoahUtils.h"
 
-using noah::noah_utils::Pin;
+using noah::utils::Pin;
 
 namespace noah {
-namespace power_management {
+namespace tasks {
 
 class PowerManagement {
 public:

@@ -20,14 +20,15 @@
 
 // Noah libraries
 #include "Config.h"
-#include "Motor.hpp"
-#include "NoahUtils.h"
-#include "Encoder.hpp"
+#include "Utils/NoahUtils.h"
+#include "Utils/Encoder.hpp"
+#include "Utils/Motor.hpp"
 
-using noah::noah_utils::Pin;
+using noah::utils::Motor;
+using noah::utils::Pin;
 
 namespace noah {
-namespace pid {
+namespace tasks {
 
 class PID {
  public:
@@ -40,9 +41,8 @@ class PID {
    * @param ki ki value of the PID.
    * @param kd kd value of the PID.
    */
-  explicit PID(Motor &motor, const float max_integration_sum =
-  MAX_INTEGRATION_SUM,
-               const float kp = 0.0f, const float ki = 0.0f, const float kd = 0.0f);
+  explicit PID(Motor &motor, const float max_integration_sum = MAX_INTEGRATION_SUM, const float kp = 0.0f,
+               const float ki = 0.0f, const float kd = 0.0f);
 
   /**
    * @brief Default destructor

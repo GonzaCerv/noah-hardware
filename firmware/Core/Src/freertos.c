@@ -25,10 +25,10 @@
 #include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */     
+/* USER CODE BEGIN Includes */
 #include "stdbool.h"
 #include "NodeEntrypoint.h"
-#include "NoahInfo.h"
+#include "Utils/NoahInfo.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

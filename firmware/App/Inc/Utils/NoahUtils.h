@@ -19,7 +19,7 @@
 #include "tim.h"
 
 namespace noah {
-namespace noah_utils {
+namespace utils {
 
 // @brief Pin structure
 struct Pin{
