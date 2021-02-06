@@ -47,10 +47,12 @@ designed.
 - [Assembly file generic version](Doc/assembly_generic.md).
   
 <img width=500px src="images/../Doc/images/robot_generic.png" alt="Generic version"></a>
+<img width=670px src="images/../Doc/images/noah_generic_2.jpg" alt="Generic version2"></a>
 
 - [Assembly file Noah version](Doc/assembly_noah.md).
   
 <img width=500px src="images/../Doc/images/robot_noah.png" alt="Noah version"></a>
+<img width=390px src="images/../Doc/images/robot_noah2.png" alt="Noah version2"></a>
 
 ## Electronics
 
