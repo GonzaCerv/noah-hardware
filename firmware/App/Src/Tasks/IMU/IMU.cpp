@@ -1,5 +1,5 @@
 /**
- * @file ROSComms.cpp
+ * @file IMU.cpp
  * @author Gonzalo Cervetti (cervetti.g@gmail.com)
  * @brief Power management class for Noah robot
  * @version 0.1
@@ -27,7 +27,7 @@ extern float current_speed_;
 namespace noah {
 namespace tasks {
 
-IMU::IMU(const UART_HandleTypeDef &ros_port, const float update_rate, NoahInfoHandler *noah_info_handler) :
+IMU::IMU(const float update_rate, NoahInfoHandler *noah_info_handler) :
     ros_port_ { ros_port },
     update_rate_ { update_rate },
     noah_info_handler_ { noah_info_handler } {

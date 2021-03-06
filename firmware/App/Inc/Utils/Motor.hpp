@@ -12,6 +12,7 @@
 #pragma once
 
 // Standard libraries
+#include <Utils/NoahUtils.hpp>
 #include <cstdlib>
 
 // CubeMx libraries
@@ -19,7 +20,6 @@
 #include "tim.h"
 
 // Noah libraries
-#include "Utils/NoahUtils.h"
 
 using noah::utils::Pin;
 using noah::utils::MotorChannel;

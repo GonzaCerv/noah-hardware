@@ -79,3 +79,8 @@
 #define COMMAND_MOTOR_KI 0xA6
 #define COMMAND_MOTOR_KD 0xA7
 
+/**
+ * @brief Configuration for IMU
+ *
+ */
+#define I2C_PORT hi2c1

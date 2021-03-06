@@ -1,7 +1,7 @@
 /**
- * @file PID
+ * @file IMU
  * @author Gonzalo Cervetti (cervetti.g@gmail.com)
- * @brief Library for managing the PID of each motor.
+ * @brief Library for managing the IMU sensor.
  * @version 0.1
  * @date 01-07-2020
  *
@@ -16,17 +16,11 @@
 #include "cmsis_os.h"
 #include "main.h"
 #include "Utils/NoahInfo.h"
-#include "usart.h"
 
 // Noah libraries
 
 namespace noah {
 namespace tasks {
-
-static constexpr uint16_t UART_BUFFER_SIZE { 100 };
-// Minimum and maximum incomming data.
-static constexpr uint16_t UART_MIN_PACKAGE_SIZE { 10 };
-static constexpr uint16_t UART_MAX_PACKAGE_SIZE { 45 };
 
 class IMU {
  public:
@@ -34,7 +28,7 @@ class IMU {
    * @brief Default constructor
    *
    */
-  explicit IMU(const UART_HandleTypeDef &ros_port, const float update_rate, NoahInfoHandler *noah_info_handler);
+  explicit IMU(const float update_rate, NoahInfoHandler *noah_info_handler);
 
   /**
    * @brief Default destructor

@@ -13,6 +13,7 @@
 
 // Standard libraries
 // CubeMx libraries
+#include <Utils/NoahUtils.hpp>
 #include "arm_math.h"
 #include "cmsis_os.h"
 #include "main.h"
@@ -20,7 +21,6 @@
 
 // Noah libraries
 #include "Config.h"
-#include "Utils/NoahUtils.h"
 #include "Utils/Encoder.hpp"
 #include "Utils/Motor.hpp"
 

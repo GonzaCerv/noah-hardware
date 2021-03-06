@@ -14,7 +14,7 @@
 #define __noah_info_H
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 // Standard libraries
@@ -22,6 +22,9 @@
 
 // CubeMx libraries
 #include "cmsis_os.h"
+
+// Noah libraries
+#include "NoahUtils.hpp"
 
 /**
  * @brief This struct holds the information of the whole system.
@@ -33,6 +36,8 @@ typedef struct {
   int16_t ticks_r;
   float target_speed_l;
   float target_speed_r;
+  Vector3 imu_acceleration;
+  Vector3 imu_gyroscope;
   osMutexId *mutexHandle;
 } NoahInfoHandler;
 
@@ -42,7 +47,6 @@ typedef struct {
  * @param info_handler handler that is going to contain the information.
  */
 void noahInfo_init(osMutexId *mutex, NoahInfoHandler *info_handler);
-
 
 bool noahInfo_isInitialized(NoahInfoHandler *info_handler);
 
@@ -102,9 +106,22 @@ void noahInfo_set_target_speed_r(NoahInfoHandler *info_handler, float speed);
  */
 float noahInfo_get_target_speed_r(NoahInfoHandler *info_handler);
 
+/**
+ * @brief Sets the acceleration of the imu.
+ * @param info_handler struct that holds the information.
+ * @param acceleration struct that holds the acceleration.
+ */
+void noahInfo_set_imu_acceleration(NoahInfoHandler *info_handler, Vector3 acceleration);
+
+/**
+ * @brief Gets the acceleration of the right encoder
+ * @param info_handler struct that holds the information.
+ * @return current acceleration of the IMU.
+ */
+Vector3 noahInfo_get_imu_acceleration(NoahInfoHandler *info_handler);
+
 #ifdef __cplusplus
 }
 #endif
 
 #endif
-

@@ -1,9 +1,9 @@
 /**
- * @file ROSCommsNode.cpp
+ * @file IMUNode.cpp
  * @author Gonzalo Cervetti (cervetti.g@gmail.com)
- * @brief Entrypoint for the node in charge of communication with ROS
+ * @brief Entrypoint for the node in charge managing IMU gathering.
  * @version 0.1
- * @date 16-07-2020
+ * @date 07-02-2021
  *
  * @copyright Copyright (c) 2020
  *
@@ -15,7 +15,7 @@
 // Noah libraries
 #include "Config.h"
 #include "NodeEntrypoint.h"
-#include "Tasks/ROScomms/ROSComms.hpp"
+#include "Tasks/IMU/IMU.hpp"
 #include "Utils/NoahInfo.h"
 
 using noah::tasks::IMU;
@@ -26,11 +26,11 @@ using noah::tasks::IMU;
  * @brief Initializes the power management node
  * @return
  */
-int ROSCommsNode(NoahInfoHandler *noah_info_handler) {
+int IMUNode(NoahInfoHandler *noah_info_handler) {
 
-  IMU ros_node(ROS_PORT, ROS_TASK_UPDATE_RATE_MS, noah_info_handler);
+  IMU imu_node(noah_info_handler);
 
-  ros_node.run();
+  imu_node.run();
   return EXIT_SUCCESS;
 }
 

@@ -10,10 +10,10 @@
  */
 
 // CubeMx libraries
+#include <Utils/NoahUtils.hpp>
 #include "main.h"
 
 // Noah libraries
-#include "Utils/NoahUtils.h"
 
 namespace noah {
 namespace utils {

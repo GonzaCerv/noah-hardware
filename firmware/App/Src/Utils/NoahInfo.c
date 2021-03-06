@@ -15,6 +15,7 @@
 
 // Noah libraries
 #include "Utils/NoahInfo.h"
+#include "NoahUtils.hpp"
 
 void noahInfo_init(osMutexId *mutex, NoahInfoHandler *info_handler) {
   info_handler->mutexHandle = mutex;
@@ -87,3 +88,14 @@ float noahInfo_get_target_speed_r(NoahInfoHandler *info_handler) {
   return speed;
 }
 
+void noahInfo_set_imu_acceleration(NoahInfoHandler *info_handler, Vector3 acceleration) {
+  osMutexWait(*(info_handler->mutexHandle), osWaitForever);
+  imu_acceleration.x = acceleration.x;
+  imu_acceleration.y = acceleration.y;
+  imu_acceleration.z = acceleration.z;
+  osMutexRelease(*(info_handler->mutexHandle));
+}
+
+Vector3 noahInfo_get_imu_acceleration(NoahInfoHandler *info_handler) {
+  return acceleration;
+}
