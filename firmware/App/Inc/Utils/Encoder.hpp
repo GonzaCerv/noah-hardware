@@ -13,6 +13,7 @@
 #pragma once
 
 // Standard libraries
+#include <Utils/NoahUtils.hpp>
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -23,11 +24,6 @@
 #include "tim.h"
 
 // Noah libraries
-#include "Utils/NoahUtils.h"
-
-using noah::utils::Pin;
-using noah::utils::MotorChannel;
-using noah::utils::applyResolution;
 
 namespace noah {
 namespace utils {

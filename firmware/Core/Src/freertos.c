@@ -55,6 +55,8 @@ osThreadId defaultTaskHandle;
 osThreadId PID_LHandle;
 osThreadId PID_RHandle;
 osThreadId ROSHandle;
+osThreadId IMUHandle;
+osThreadId ButtonHandle;
 osMessageQId msg_q_encoder_lHandle;
 osMessageQId msg_q_encoder_rHandle;
 osMutexId sysInfoHandle;
@@ -68,6 +70,8 @@ void StartDefaultTask(void const * argument);
 void tsk_pid_l(void const * argument);
 void tsk_pid_r(void const * argument);
 void tsk_ros(void const * argument);
+void tsk_imu(void const * argument);
+void tsk_button(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -141,8 +145,16 @@ void MX_FREERTOS_Init(void) {
   PID_RHandle = osThreadCreate(osThread(PID_R), NULL);
 
   /* definition and creation of ROS */
-  osThreadDef(ROS, tsk_ros, osPriorityNormal, 0, 2500);
+  osThreadDef(ROS, tsk_ros, osPriorityNormal, 0, 1000);
   ROSHandle = osThreadCreate(osThread(ROS), NULL);
+
+  /* definition and creation of IMU */
+  osThreadDef(IMU, tsk_imu, osPriorityNormal, 0, 800);
+  IMUHandle = osThreadCreate(osThread(IMU), NULL);
+
+  /* definition and creation of Button */
+  osThreadDef(Button, tsk_button, osPriorityIdle, 0, 250);
+  ButtonHandle = osThreadCreate(osThread(Button), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -183,11 +195,11 @@ void StartDefaultTask(void const * argument)
 void tsk_pid_l(void const * argument)
 {
   /* USER CODE BEGIN tsk_pid_l */
-  while(!initialized){
-    osDelay(2);
-  }
-  PIDLNode(&noah_info_handler);
-  /* Infinite loop */
+//  while(!initialized){
+//    osDelay(2);
+//  }
+//  PIDLNode(&noah_info_handler);
+//  /* Infinite loop */
   for(;;)
   {
     osDelay(1);
@@ -205,11 +217,11 @@ void tsk_pid_l(void const * argument)
 void tsk_pid_r(void const * argument)
 {
   /* USER CODE BEGIN tsk_pid_r */
-  while(!initialized){
-    osDelay(2);
-  }
-  PIDRNode(&noah_info_handler);
-  /* Infinite loop */
+//  while(!initialized){
+//    osDelay(2);
+//  }
+//  PIDRNode(&noah_info_handler);
+//  /* Infinite loop */
   for(;;)
   {
     osDelay(1);
@@ -227,16 +239,57 @@ void tsk_pid_r(void const * argument)
 void tsk_ros(void const * argument)
 {
   /* USER CODE BEGIN tsk_ros */
-  while(!initialized){
-    osDelay(2);
-  }
-  ROSCommsNode(&noah_info_handler);
-  /* Infinite loop */
+//  while(!initialized){
+//    osDelay(2);
+//  }
+//  ROSCommsNode(&noah_info_handler);
+//  /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
   /* USER CODE END tsk_ros */
+}
+
+/* USER CODE BEGIN Header_tsk_imu */
+/**
+* @brief Function implementing the IMU thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_tsk_imu */
+void tsk_imu(void const * argument)
+{
+  /* USER CODE BEGIN tsk_imu */
+  while(!initialized){
+    osDelay(2);
+  }
+  osDelay(100);
+  IMUNode(&noah_info_handler);
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END tsk_imu */
+}
+
+/* USER CODE BEGIN Header_tsk_button */
+/**
+* @brief Function implementing the Button thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_tsk_button */
+void tsk_button(void const * argument)
+{
+  /* USER CODE BEGIN tsk_button */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END tsk_button */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -22,6 +22,7 @@ int PowerManagementNode();
 int PIDLNode(NoahInfoHandler *noah_info_handler);
 int PIDRNode(NoahInfoHandler *noah_info_handler);
 int ROSCommsNode(NoahInfoHandler *noah_info_handler);
+int IMUNode(NoahInfoHandler *noah_info_handler);
 
 #ifdef __cplusplus
 }

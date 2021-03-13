@@ -52,9 +52,8 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOE, MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin
-                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin
-                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin
-                          |MOT_R2_Pin, GPIO_PIN_RESET);
+                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|ESP07_EN_Pin
+                          |ESP07_RST_Pin|MOT_R1_Pin|MOT_R2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, AUX_LED1_Pin|AUX_LED2_Pin, GPIO_PIN_RESET);
@@ -73,12 +72,10 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PEPin PEPin PEPin PEPin
                            PEPin PEPin PEPin PEPin
-                           PEPin PEPin PEPin PEPin
-                           PEPin */
+                           PEPin PEPin PEPin */
   GPIO_InitStruct.Pin = MOT_STAND_BY_Pin|MOT_L1_Pin|MOT_L2_Pin|GPIO6_Pin
-                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|IMU_CSB_Pin
-                          |IMU_NCS_Pin|ESP07_EN_Pin|ESP07_RST_Pin|MOT_R1_Pin
-                          |MOT_R2_Pin;
+                          |GPIO7_Pin|GPIO8_Pin|GPIO9_Pin|ESP07_EN_Pin
+                          |ESP07_RST_Pin|MOT_R1_Pin|MOT_R2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

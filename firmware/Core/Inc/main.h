@@ -99,10 +99,6 @@ void Error_Handler(void);
 #define GPIO8_GPIO_Port GPIOE
 #define GPIO9_Pin GPIO_PIN_10
 #define GPIO9_GPIO_Port GPIOE
-#define IMU_CSB_Pin GPIO_PIN_11
-#define IMU_CSB_GPIO_Port GPIOE
-#define IMU_NCS_Pin GPIO_PIN_12
-#define IMU_NCS_GPIO_Port GPIOE
 #define IMU_SDO_Pin GPIO_PIN_13
 #define IMU_SDO_GPIO_Port GPIOE
 #define ESP07_EN_Pin GPIO_PIN_14

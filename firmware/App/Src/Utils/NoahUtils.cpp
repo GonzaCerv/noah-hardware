@@ -1,5 +1,5 @@
 /**
- * @file NoahUtils.c
+ * @file NoahUtils.cpp
  * @author Gonzalo Cervetti (cervetti.g@gmal.com)
  * @brief Various util functions for Noah.
  * @version 0.1
@@ -13,7 +13,7 @@
 #include "main.h"
 
 // Noah libraries
-#include "Utils/NoahUtils.h"
+#include <Utils/NoahUtils.hpp>
 
 namespace noah {
 namespace utils {

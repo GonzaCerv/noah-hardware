@@ -14,6 +14,7 @@
 // CubeMx libraries
 #include "cmsis_os.h"
 #include "main.h"
+#include "i2c.h"
 #include "tim.h"
 #include "usart.h"
 
@@ -78,4 +79,15 @@
 #define COMMAND_MOTOR_KP 0xA5
 #define COMMAND_MOTOR_KI 0xA6
 #define COMMAND_MOTOR_KD 0xA7
+
+/**
+ * @brief Configuration for IMU comms
+ *
+ */
+#define IMU_I2C_PORT hi2c1
+#define IMU_GYRO_DPS 1000
+#define IMU_ACCEL_G 8
+#define IMU_LPF 10
+#define IMU_SAMPLE_RATE_HZ 100
+#define IMU_COMPASS_SAMPLE_RATE_HZ 20
 

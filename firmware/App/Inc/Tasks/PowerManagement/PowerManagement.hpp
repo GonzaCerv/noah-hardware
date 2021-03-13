@@ -12,12 +12,11 @@
 #pragma once
 
 // CubeMx libraries
+#include <Utils/NoahUtils.hpp>
 #include "cmsis_os.h"
 #include "main.h"
 
-// Noah libraries
-#include "Utils/NoahUtils.h"
-
+using noah::utils::MotorChannel;
 using noah::utils::Pin;
 
 namespace noah {

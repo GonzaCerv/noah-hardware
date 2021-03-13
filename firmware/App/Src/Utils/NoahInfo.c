@@ -87,3 +87,20 @@ float noahInfo_get_target_speed_r(NoahInfoHandler *info_handler) {
   return speed;
 }
 
+void noahInfo_set_imu_acceleration(NoahInfoHandler *info_handler, Vector3 acceleration) {
+  osMutexWait(*(info_handler->mutexHandle), osWaitForever);
+  info_handler->imu_accelerometer.x = acceleration.x;
+  info_handler->imu_accelerometer.y = acceleration.y;
+  info_handler->imu_accelerometer.z = acceleration.z;
+  osMutexRelease(*(info_handler->mutexHandle));
+}
+
+Vector3 noahInfo_get_imu_acceleration(NoahInfoHandler *info_handler) {
+  Vector3 acceleration;
+  osMutexWait(*(info_handler->mutexHandle), osWaitForever);
+  acceleration.x = info_handler->imu_accelerometer.x;
+  acceleration.y = info_handler->imu_accelerometer.y;
+  acceleration.z = info_handler->imu_accelerometer.z;
+  osMutexRelease(*(info_handler->mutexHandle));
+  return acceleration;
+}

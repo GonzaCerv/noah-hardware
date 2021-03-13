@@ -23,6 +23,13 @@
 // CubeMx libraries
 #include "cmsis_os.h"
 
+// @brief Generic Vector3 struct.
+ typedef struct {
+   float x;
+   float y;
+   float z;
+ } Vector3;
+
 /**
  * @brief This struct holds the information of the whole system.
  *        It must be used with the methods of this library or it
@@ -33,6 +40,8 @@ typedef struct {
   int16_t ticks_r;
   float target_speed_l;
   float target_speed_r;
+  Vector3 imu_accelerometer;
+  Vector3 imu_gyroscope;
   osMutexId *mutexHandle;
 } NoahInfoHandler;
 
@@ -101,6 +110,20 @@ void noahInfo_set_target_speed_r(NoahInfoHandler *info_handler, float speed);
  * @return current left target speed of the motor.
  */
 float noahInfo_get_target_speed_r(NoahInfoHandler *info_handler);
+
+/**
+ * @brief Sets the imu acceleration.
+ * @param info_handler struct that holds the information.
+ * @param acceleration acceleration to save.
+ */
+void noahInfo_set_imu_acceleration(NoahInfoHandler *info_handler, Vector3 acceleration);
+
+/**
+ * @brief Gets the speed of the right encoder
+ * @param info_handler struct that holds the information.
+ * @return current imu acceleration.
+ */
+Vector3 noahInfo_get_imu_acceleration(NoahInfoHandler *info_handler);
 
 #ifdef __cplusplus
 }

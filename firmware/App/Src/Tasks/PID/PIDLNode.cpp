@@ -19,9 +19,9 @@
 
 using noah::utils::Encoder;
 using noah::utils::Motor;
-using noah::tasks::PID;
 using noah::utils::MotorChannel;
 using noah::utils::Pin;
+using noah::tasks::PID;
 
 // External variable definitions
 extern osMessageQId msg_q_encoder_lHandle;

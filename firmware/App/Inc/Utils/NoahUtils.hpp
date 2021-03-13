@@ -1,5 +1,5 @@
 /**
- * @file NoahUtils.h
+ * @file NoahUtils.hpp
  * @author Gonzalo Cervetti (cervetti.g@gmal.com)
  * @brief Various utilities for Noahproject.
  * @version 0.1
@@ -22,17 +22,16 @@ namespace noah {
 namespace utils {
 
 // @brief Pin structure
-struct Pin{
-	GPIO_TypeDef* port;
-	uint16_t pin;
-};
+typedef struct {
+  GPIO_TypeDef *port;
+  uint16_t pin;
+} Pin;
 
 // @brief Timer channel structure
-struct MotorChannel{
-	TIM_HandleTypeDef* timer;
-	uint32_t channel;
-};
-
+typedef struct {
+  TIM_HandleTypeDef *timer;
+  uint32_t channel;
+} MotorChannel;
 
 /**
  * @brief Sort an array of values.
@@ -72,5 +71,24 @@ void dinamicSetPinToOutput(Pin pin);
  * @param pin
  */
 void dinamicSetPinToInput(Pin pin);
+
+/**
+ * @brief Sets X between A and B
+ * @tparam T Type of the value to constrain.
+ * @param x value to constrain.
+ * @param a min value.
+ * @param b max value.
+ * @return x constrained.
+ */
+template<class T>
+const T& constrain(const T &x, const T &a, const T &b) {
+  if (x < a) {
+    return a;
+  } else if (b < x) {
+    return b;
+  } else
+    return x;
+}
+
 }
 }
