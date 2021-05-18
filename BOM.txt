@@ -1,3 +1,0 @@
-1 Raspberry PI
-1 protoboard
-2 ruedas
